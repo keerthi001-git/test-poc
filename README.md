@@ -51,31 +51,29 @@ src/test/java
     - testUtilities 
  
 src/test/resources     
-    - log4j.xml
+     - log4j.xml
 configs
-	- checkstyle
-       - Configuration.properties	{contains env specific information} 
+      - checkstyle
+      - Configuration.properties	{contains env specific information} 
 logs
-   - log trace
+      - log trace
 reports
-    - Output Extent Report
+      - Output Extent Report
      
 screenshots
-    - failed step screenshots
+      - failed step screenshots
     
 target      
-  - surefire reports
-	- generated sources
-	- generated test sources
-	- maven-status
-    
+       - surefire reports
+       - generated sources
+       - generated test sources
+       - maven-status
 TestData        
-    - images (contains upload images)	  
-    - ArtVault Test Data	{contains xlsx static lookup data}   
+       - images (contains upload images)	  
+       - ArtVault Test Data	{contains xlsx static lookup data}   
 	
 test-output
-    - emailable-report.html
-	
+       - emailable-report.html
 crossbrowsertestng.xml
 testng.xml
 pom.xml
