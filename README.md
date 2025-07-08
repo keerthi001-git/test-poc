@@ -52,11 +52,14 @@ src/test/java
  
 src/test/resources     
 - log4j.xml
+
 configs
 - checkstyle
-- Configuration.properties	{contains env specific information} 
+- Configuration.properties	{contains env specific information}
+
 logs
 - log trace
+
 reports
 - Output Extent Report
      
@@ -68,6 +71,7 @@ target
  - generated sources
  - generated test sources
  - maven-status
+
 TestData
  - images (contains upload images)	  
  - ArtVault Test Data	{contains xlsx static lookup data}   
