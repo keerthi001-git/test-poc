@@ -47,21 +47,21 @@ src/main/java
       
 src/main/resources  
 src/test/java   
-    - PageTest 
-     - testUtilities 
+- PageTest 
+- testUtilities 
  
 src/test/resources     
-      - log4j.xml
+- log4j.xml
 configs
-      - checkstyle
-       - Configuration.properties	{contains env specific information} 
+- checkstyle
+- Configuration.properties	{contains env specific information} 
 logs
-      - log trace
+- log trace
 reports
-      - Output Extent Report
+- Output Extent Report
      
 screenshots
-      - failed step screenshots
+- failed step screenshots
     
 target      
  - surefire reports
@@ -74,6 +74,9 @@ TestData
 	
 test-output
  - emailable-report.html
+
 crossbrowsertestng.xml
+
 testng.xml
+
 pom.xml
