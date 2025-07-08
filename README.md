@@ -48,13 +48,13 @@ src/main/java
 src/main/resources  
 src/test/java   
     - PageTest 
-    - testUtilities 
+     - testUtilities 
  
 src/test/resources     
-     - log4j.xml
+      - log4j.xml
 configs
       - checkstyle
-      - Configuration.properties	{contains env specific information} 
+       - Configuration.properties	{contains env specific information} 
 logs
       - log trace
 reports
@@ -64,16 +64,16 @@ screenshots
       - failed step screenshots
     
 target      
-       - surefire reports
-       - generated sources
-       - generated test sources
-       - maven-status
-TestData        
-       - images (contains upload images)	  
-       - ArtVault Test Data	{contains xlsx static lookup data}   
+ - surefire reports
+ - generated sources
+ - generated test sources
+ - maven-status
+TestData
+ - images (contains upload images)	  
+ - ArtVault Test Data	{contains xlsx static lookup data}   
 	
 test-output
-       - emailable-report.html
+ - emailable-report.html
 crossbrowsertestng.xml
 testng.xml
 pom.xml
