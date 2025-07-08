@@ -21,7 +21,13 @@ Clone the Repo-: https://github.com/keerthi001-git/test-poc
 Checkout master branch
 git checkout master
 
-## 2. Install testng for eclipse
+## 2. Install 
+Below software’s are installed on your machine
+- JDK 11 (JDK & JRE):
+- Eclipse IDE For Java Developers (Latest Version)
+- Maven 
+
+Set the Java Path , Java Home and Maven path correctly in the system.
 
 ## 3. Update the maven project
 
