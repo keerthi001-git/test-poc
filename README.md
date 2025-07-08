@@ -18,7 +18,7 @@ ArtVault - https://agreeable-island-08eca9200.6.azurestaticapps.net/
 
 Clone the Repo-: https://github.com/keerthi001-git/test-poc
 
-Checkout bdd_framework branch
+Checkout master branch
 git checkout master
 
 ## 2. Install testng for eclipse
