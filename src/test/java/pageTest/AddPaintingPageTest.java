@@ -11,7 +11,7 @@ import testUtilities.DataProviders;
 public class AddPaintingPageTest extends BaseClass {
 
 	
-	@Test (dataProvider="AddPaintRequiredFieldData", dataProviderClass=DataProviders.class, enabled=true)
+	@Test (dataProvider="AddPaintRequiredFieldData", dataProviderClass=DataProviders.class, groups= {"AddPainting", "Master", "Regression"},enabled=false)
 	public void TC07_verify_Required_Field_Validation(String title, String artist, String Dimensions, String Medium,
 			String PriceField, String CreationYearField, String inspirationTheme, String exp) {
 
@@ -69,7 +69,7 @@ public class AddPaintingPageTest extends BaseClass {
 
 	}
 	
-	@Test (dataProvider="AddPaintPriceData", dataProviderClass=DataProviders.class, enabled=true)
+	@Test (dataProvider="AddPaintPriceData", dataProviderClass=DataProviders.class,groups= {"AddPainting", "Master", "Regression"}, enabled=false)
 	public void TC08_verify_PriceField_Validation(String title, String artist, String Dimensions, String Medium,
 			String PriceField, String CreationYearField, String inspirationTheme, String exp) {
 
@@ -126,7 +126,7 @@ public class AddPaintingPageTest extends BaseClass {
 	}
 	
 	
-	@Test (dataProvider="AddPaintYearData", dataProviderClass=DataProviders.class, enabled=true)
+	@Test (dataProvider="AddPaintYearData", dataProviderClass=DataProviders.class,groups= {"AddPainting", "Master", "Regression"}, enabled=false)
 	public void TC09_verify_CreationYearField_Validation(String title, String artist, String Dimensions, String Medium,
 			String PriceField, String CreationYearField, String inspirationTheme, String exp) {
 
@@ -188,7 +188,7 @@ public class AddPaintingPageTest extends BaseClass {
 
 	
 
-	@Test(dataProvider="AddArtistAddPaintingData", dataProviderClass=DataProviders.class, enabled = true)
+	@Test(dataProvider="AddPaintingValidData", dataProviderClass=DataProviders.class,groups= {"AddPainting", "Master", "Regression"}, enabled = true)
 	public void TC00011_Verify_entered_data_should_be_removed_from_the_fields_when_the_user_click_on_reset_form_CTA(
 			String title, String artist, String Dimensions, String Medium, String PriceField, String CreationYearField,
 			String inspirationTheme, String exp) {
@@ -207,27 +207,29 @@ public class AddPaintingPageTest extends BaseClass {
 			addPaint.upload_image_in_imageField();
 			Thread.sleep(5000);
 			addPaint.click_on_AddPaintingButton();
+			Thread.sleep(5000);
 			addPaint.click_on_ResetFormButton();
-		
-
-			if (addPaint.get_text_from_TitleField().isEmpty() && addPaint.get_text_from_DimensionsField().isEmpty()
+				if (addPaint.get_text_from_TitleField().isEmpty() && addPaint.get_text_from_DimensionsField().isEmpty()
 					&& addPaint.get_text_from_MediumField().isEmpty() && addPaint.get_text_from_PriceField().isEmpty()
 					&& addPaint.get_text_from_CreationYearField().isEmpty()
 					&& addPaint.get_text_from_InspirationThemeField().isEmpty()) {
 				System.out.println("All fields are empty!!");
 				System.out.println("TestCase00011_ResetForm_Test case is pass");
+				Assert.assertTrue(true);
 
 			} else {
 				System.out.println("TestCase00011_ResetForm_Test case is Failed");
+				Assert.assertTrue(false);
 			}
 					} catch (Exception e) {
 			System.out.println("unable to clear the form fields");
+			Assert.assertTrue(false);
 
 		}
 
 	}
 
-	@Test(dataProvider="AddArtistAddPaintingData",dataProviderClass=DataProviders.class, enabled = true)
+	@Test(dataProvider="AddPaintingValidData",dataProviderClass=DataProviders.class,groups= {"AddPainting", "Master", "Regression", "sanity"}, enabled = false)
 	public void TC00012_Verify_New_paining_can_be_added_from_add_painting_page(String title, String artist,
 			String Dimensions, String Medium, String PriceField, String CreationYearField, String inspirationTheme,
 			String exp) {
@@ -273,7 +275,7 @@ public class AddPaintingPageTest extends BaseClass {
 
 	}
 
-	@Test (dataProvider="AddArtistAddPaintingData",dataProviderClass=DataProviders.class, enabled = false)
+	@Test (dataProvider="AddPaintingValidData",dataProviderClass=DataProviders.class,groups= {"AddPainting", "Master", "Regression","sanity"}, enabled = false)
 	public void TC005_Verify_Newly_added_Painting_is_displayed_in_Home_page() {
 		try {
 			AddPaintingPage addPaint = new AddPaintingPage(driver);

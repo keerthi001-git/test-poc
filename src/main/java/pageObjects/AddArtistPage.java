@@ -107,9 +107,9 @@ public class AddArtistPage extends BasePage {
 	 
 	 public void Click_Attachment_ImageFile()
 	 {
-		 
-		 Attachment_ImageChooseFile.sendKeys("C:\\Users\\ake\\Downloads\\Art Image1.jpg");
-		// Attachment_ImageChooseFile.click();
+		 Attachment_ImageChooseFile.sendKeys(System.getProperty("user.dir")+"\\TestData\\images\\Art Image1.jpg"); 
+		 // Attachment_ImageChooseFile.sendKeys("C:\\Users\\ake\\Downloads\\Art Image1.jpg");
+		
 		 		 
 	 }
 	 

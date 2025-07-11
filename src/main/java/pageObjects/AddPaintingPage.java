@@ -109,7 +109,7 @@ public class AddPaintingPage extends BasePage {
 
 	public void upload_image_in_imageField() {
 
-		FileUpload_Image.sendKeys("C:\\Users\\ake\\Downloads\\pexels-ekrulila-3246665.jpg");
+		FileUpload_Image.sendKeys(System.getProperty("user.dir")+"\\TestData\\images\\pexels-ekrulila-3246665.jpg");
 
 	}
 

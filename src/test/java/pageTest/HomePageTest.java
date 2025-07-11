@@ -10,25 +10,25 @@ import pageObjects.HomePage;
 public class HomePageTest extends BaseClass{
 	
 	
-		@Test(enabled=false)
+		@Test(groups= {"Home", "Master", "Regression"}, enabled=false)
 		public void TC001_verify_homepage_sort() throws InterruptedException
 		{
-			logger.info("************************** Starting TC001_HomepageTest *******************");
+			
 			HomePage hp=new HomePage(driver);
-			logger.info("************************** Clicked on home page sort *******************");
+			
 			//hp.ClickOnSortFilter();
 			Thread.sleep(2000);
 			hp.srtFilterUsingDropdown();
-			logger.info("************************** Finished TC001_HomepageTest *******************");
+			
 			
 		}
-		@Test(enabled=false)
+		@Test(groups= {"Home", "Master", "Regression"},enabled=false)
 		public void TC002_verify_homepage_filterUsingInput()
 		{
 			HomePage hp=new HomePage(driver);
 			hp.inpFiltervalues();
 		}
-		@Test(enabled=false)
+		@Test(groups= {"Home", "Master", "Regression, sanity"},enabled=false)
 		public void TC003_Verify_clickOnProduct_pdp()
 		{
 			HomePage hp=new HomePage(driver);
@@ -36,7 +36,7 @@ public class HomePageTest extends BaseClass{
 			driver.navigate().back();
 		}
 		
-		@Test(enabled=false)
+		@Test(groups= {"Home", "Master", "Regression"},enabled=false)
 		public void TC004_Verify_successMessageDisplay_onShowInterest()
 		{
 			HomePage hp=new HomePage(driver);
@@ -44,7 +44,7 @@ public class HomePageTest extends BaseClass{
 			driver.navigate().back();
 		}
 		
-		@Test(enabled=true)
+		@Test(groups= {"Home", "Master", "Regression"},enabled=true)
 		public void TC005_Verify_successMessageNotDisplay()
 		{
 			HomePage hp=new HomePage(driver);

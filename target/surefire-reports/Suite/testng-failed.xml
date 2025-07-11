@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="testUtilities.RetryListeners"/>
+    <listener class-name="testUtilities.ExtentReportManager"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="pageTest.AddPaintingPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="TC00011_Verify_entered_data_should_be_removed_from_the_fields_when_the_user_click_on_reset_form_CTA" invocation-numbers="0 0 0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- pageTest.AddPaintingPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

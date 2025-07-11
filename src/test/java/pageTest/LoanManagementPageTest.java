@@ -13,7 +13,7 @@ import pageObjects.LoanManagementPage;
 
 public class LoanManagementPageTest extends BaseClass {
 	
-		@Test
+		@Test(groups= {"LoanManagement", "Master", "Regression, sanity"})
 		public void TC001_loanPaintingCreation() throws InterruptedException
 		{
 			HomePage hp=new HomePage(driver);
@@ -21,7 +21,7 @@ public class LoanManagementPageTest extends BaseClass {
 			hp.loanManagementClick();
 			lmang.loanPainting();
 		}
-		@Test(enabled=false)
+		@Test(groups= {"LoanManagement", "Master", "Regression, sanity"}, enabled=false)
 		public void TC002_returnLoanPainting() throws InterruptedException
 		{
 			HomePage hp=new HomePage(driver);
@@ -29,7 +29,7 @@ public class LoanManagementPageTest extends BaseClass {
 			hp.loanManagementClick();
 			lmang.returnLoanedPainting();
 		}
-		@Test(enabled=false)
+		@Test(groups= {"LoanManagement", "Master", "Regression, sanity"},enabled=false)
 		public void TC003_errorValidation_ReturnedImages()
 		{
 			HomePage hp=new HomePage(driver);

@@ -161,8 +161,8 @@ public class DataProviders {
 				
 				ExcelUtility xlutil=new ExcelUtility(path); 
 						
-						int totalrows= xlutil.getRowCount("AddPaintingData");
-						int totalcols=xlutil.getCellCount("AddPaintingData", 1);
+						int totalrows= xlutil.getRowCount("AddArtistAddPaintingData");
+						int totalcols=xlutil.getCellCount("AddArtistAddPaintingData", 1);
 						
 						String AddPaintingValidData[][] = new String[totalrows][totalcols]; 
 						
@@ -170,7 +170,7 @@ public class DataProviders {
 						{
 							for(int j=0; j<totalcols; j++)  
 							{
-								AddPaintingValidData[i-1][j] = xlutil.getCellData("AddPaintingData", i, j);  
+								AddPaintingValidData[i-1][j] = xlutil.getCellData("AddArtistAddPaintingData", i, j);  
 							}
 						}
 						return AddPaintingValidData;  // returning two dimension array

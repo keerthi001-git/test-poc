@@ -11,7 +11,7 @@ import testUtilities.DataProviders;
 
 public class AddArtistPageTest extends BaseClass {
 	
-	@Test (dataProvider="AddArtistsData", dataProviderClass=DataProviders.class, enabled=true) 
+	@Test (dataProvider="AddArtistsData", dataProviderClass=DataProviders.class,groups= {"AddArtist", "Master", "Regression"}, enabled=false) 
 	public void TC01_verify_PhoneNumber_Field_validation(String name, String email, String phoneNumber, String bio, String exp) throws InterruptedException {
 
 	try {
@@ -40,7 +40,7 @@ public class AddArtistPageTest extends BaseClass {
 				
 			if(exp.equalsIgnoreCase("Valid")) {
 			 
-			 if(addartist.verify_from_Submitionpopup_isDisplayed()==true)
+			 if(addartist.verify_from_Submitionpopup_isDisplayed()==true) {
 			//	 addartist.click_Confirm_Submition_Popup();
 			// 	addartist.click_Ok_on_success_Popup();
 				 System.out.println("Susscess popup is displayed for valid data "+ name);
@@ -52,8 +52,7 @@ public class AddArtistPageTest extends BaseClass {
 				 System.out.println("error popup is displayed for valid data "+ name);
 				 Assert.assertTrue(false);
 			 }
-				 
-			if(exp.equalsIgnoreCase("Invalid")) {
+			}else if(exp.equalsIgnoreCase("Invalid")) {
 			 
 			 if(addartist.verify_from_Submitionpopup_isDisplayed()==true)
 			 {
@@ -84,7 +83,7 @@ public class AddArtistPageTest extends BaseClass {
 	}
 	
 	
-	@Test (dataProvider="RequiredFieldData", dataProviderClass=DataProviders.class, enabled=true)
+	@Test (dataProvider="RequiredFieldData", dataProviderClass=DataProviders.class,groups= {"AddArtist", "Master", "Regression"}, enabled=false)
 	public void TC02_Required_Field_Validation(String name, String email, String phoneNumber, String bio, String exp) {
 		
 
@@ -133,7 +132,7 @@ public class AddArtistPageTest extends BaseClass {
 				
 	}
 	
-	@Test (dataProvider="EmailFieldData", dataProviderClass=DataProviders.class)
+	@Test (dataProvider="EmailFieldData", dataProviderClass=DataProviders.class,groups= {"AddArtist", "Master", "Regression"},enabled=false)
 	public void TC03_verify_EmailPattren_Field_Validation(String name, String email, String phoneNumber, String bio, String exp) {
 		try {
 			HomePage hp = new HomePage(driver);
@@ -171,7 +170,7 @@ public class AddArtistPageTest extends BaseClass {
 				 }
 				
 			 }
-			 if(exp.equalsIgnoreCase("Valid")) {
+			 else if(exp.equalsIgnoreCase("Valid")) {
 				 
 				 if(ActualemailID==true)
 					 				 
@@ -194,7 +193,7 @@ public class AddArtistPageTest extends BaseClass {
 		
 	}
 	
-	@Test (enabled=true)
+	@Test (groups= {"AddArtist", "Master", "Regression, sanity"},enabled=true)
 	public void TC04_Verify_the_entered_data_should_be_removed_from_the_fields_when_user_click_on_the_reset_form_CTA_in_Add_Artist_page() throws InterruptedException {
 		try {	
 		HomePage hp = new HomePage(driver);
@@ -240,7 +239,7 @@ public class AddArtistPageTest extends BaseClass {
 		
 	}
 	
-	@Test (enabled=true)
+	@Test (groups= {"AddArtist", "Master", "Regression"},enabled=false)
 	public void TC05_Verify_New_artist_can_be_added_in_add_artist_page() throws InterruptedException {
 
 		try {
@@ -292,7 +291,7 @@ public class AddArtistPageTest extends BaseClass {
 //		logger.info("************************** Finished TC001_HomepageTest *******************");
 	}
 
-	@Test (enabled=true) 
+	@Test (groups= {"AddArtist", "Master", "Regression, Sanity"},enabled=false) 
 	public void TC004_Verify_Newly_added_Artist_details_are_displayed_in_About_artist_page()
 	{
 		
@@ -309,7 +308,7 @@ public class AddArtistPageTest extends BaseClass {
 			addartist.Enter_PhoneNumber(BaseClass.randamNumber());
 			Thread.sleep(2000);
 			addartist.Enter_TextInBio_AdditionalInformation(BaseClass.RandamString());
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 			
 			addartist.Click_Attachment_ImageFile();
 			Thread.sleep(5000);

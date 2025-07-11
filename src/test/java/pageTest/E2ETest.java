@@ -9,7 +9,7 @@ import pageObjects.HomePage;
 
 public class E2ETest extends BaseClass{
 	
-	@Test
+	@Test (groups= {"E2ETestcase", "Master", "Regression, sanity"})
 	public void verify_User_able_add_artist_and_Add_painting_and_see_the_newly_added_painting_in_homepage() throws InterruptedException {
 		
 		HomePage hp=new HomePage(driver);
